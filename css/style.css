@@ -15,7 +15,24 @@ body {
     margin: 0 auto;
 }
 
+.top-player-title,
+.top-blog-title,
+.lates-courses-title {
+    color: #562EFF;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    margin-left: 105px;
+    padding-top: 33px;
+}
 
+.top-player-container,
+.top-blog-post-container,
+.Lates-course-container {
+    border-radius: 5px;
+    background: #FFF;
+    margin-bottom: 21px;
+}
 
 
 /*----------- navbar style start------------- */
@@ -36,13 +53,22 @@ body {
     width: 50px;
 }
 
-.nav-list,
 .logo-icon {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 30px;
     padding: 10px 0;
+    margin-right: 190px;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 10px 0;
+    margin-left: 30px;
 }
 
 .nav-list li {
@@ -57,19 +83,6 @@ body {
 
 /* ----------Top player style start here --------------------*/
 
-.top-player-container {
-    border-radius: 5px;
-    background: #FFF;
-}
-
-.top-player-title {
-    color: #562EFF;
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 40px;
-    margin-left: 105px;
-    padding-top: 33px;
-}
 
 .player-profile {
     display: grid;
@@ -88,25 +101,151 @@ body {
 .player {
     width: 56px;
 }
-hr{
-    margin-top: 30px;
+
+hr {
+    margin: 33px 35px 0 35px;
 }
 
 
+/* ----Top Blog post style start here */
+.top-blog-post {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0 50px;
+    margin-left: 10px;
+}
 
+.top-blog-post-container {
+    display: flex;
+    gap: 30px;
+    padding-right: 50px;
+}
 
+.blog-image {
+    width: 224px;
+}
+.blog-info{
+    margin-top: 10px;
+}
+.blog-title {
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+}
 
-/*--------- Resonsive style start here -----  */
+.blog-writter {
+    color: #562EFF;
+}
+
+.by {
+    color: #9F9F9F;
+}
+
+/* ------ Lates courses style start here */
+.course-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 28px;
+    padding-bottom: 23px;
+
+}
+
+.Lates-courses {
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 5px #e6e6e6;
+}
+
+.course-info img {
+    padding-left: 12px;
+}
+
+.course-info img {
+    width: 266px;
+    margin-top: 13px;
+    margin-bottom: 24px;
+}
+
+.course-name {
+    color: #1E1E1E;
+    font-size: 20px;
+    font-weight: 600;
+    padding-left: 11px;
+    padding-right: 50px;
+}
+
+.corse-teacher-name {
+    color: #ED6B4F;
+    font-size: 15px;
+    margin: 8px 0 20px 0;
+}
+
+.rating-info,.course-name,.corse-teacher-name {
+    padding-left: 11px;
+}
+
+.rating-duration {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 16px;
+
+}
+
+.rating-info,
+.time-duration {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.time-duration {
+    border-radius: 15px;
+    background: #fddae0;
+    padding: 6px 10px;
+}
+.rating-point p{
+    color: #A2A2A2;
+}
+.time{
+    color:#FF4A60;
+    font-weight: 600;
+}
+
+/*------------- Resonsive style start here ----- --------- */
 
 /* Medium device resposive stayle start  */
-@media screen and (min-width:577px) and (max-width:992px) {}
+@media screen and (min-width:577px) and (max-width:992px) {
+    .player-profile {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-/* Modibe device resposive start here  */
+    .top-player-title {
+        text-align: start;
+        margin-left: 50px;
+    }
+
+    /* Top blog post start */
+    .top-blog-post {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
+
+/* ----------------Modibe device resposive start here -------------------- */
 
 @media screen and (max-width:576px) {
     .header-container {
         padding: 0 10px;
     }
+
+    .logo-icon,
+    .nav-list {
+        margin-right: -150px;
+        margin-left: -50px;
+    }
+
 
     .logo-title {
         visibility: hidden;
@@ -114,5 +253,24 @@ hr{
 
     .profile-image {
         visibility: hidden;
+    }
+
+    /* Top player media query start here */
+    .player-profile {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .top-player-title {
+        padding-left: 20px;
+    }
+
+    /* Top blog post start */
+    .top-blog-post {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .top-blog-post-container {
+        flex-direction: column-reverse;
+        gap: 20px;
     }
 }
